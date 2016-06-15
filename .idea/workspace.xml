@@ -2,85 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c40b21-e8d0-4892-876a-a3e327ef1781" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/math-template.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/bootstrap-3.3.6-dist/js/npm.js" afterPath="$PROJECT_DIR$/web/references/bootstrap-3.3.6-dist/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/HELP-US-OUT.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/css/font-awesome.css" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/animated.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/animated.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/bordered-pulled.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/core.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/core.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/fixed-width.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/fixed-width.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/font-awesome.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/font-awesome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/icons.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/larger.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/larger.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/list.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/mixins.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/path.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/path.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/rotated-flipped.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/screen-reader.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/screen-reader.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/stacked.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/stacked.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/less/variables.less" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_animated.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_animated.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_bordered-pulled.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_core.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_core.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_fixed-width.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_icons.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_larger.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_larger.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_list.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_mixins.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_path.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_path.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_rotated-flipped.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_screen-reader.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_stacked.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_stacked.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/_variables.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/font-awesome-4.6.3/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/web/references/font-awesome-4.6.3/scss/font-awesome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/external/jquery/jquery.js" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/external/jquery/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-icons_228ef1_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-icons_ef8c08_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-icons_ffd27a_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/index.html" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.js" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.min.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.min.js" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.structure.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.structure.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.structure.min.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.structure.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.theme.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/reference/jquery-ui-1.11.4/jquery-ui.theme.min.css" afterPath="$PROJECT_DIR$/web/references/jquery-ui-1.11.4/jquery-ui.theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/math.iml" afterPath="$PROJECT_DIR$/.idea/math.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig" afterPath="$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig" />
     </list>
     <ignored path="math.iws" />
@@ -109,11 +33,11 @@
     <favorites_list name="math" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="QuestionRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModelBundle/Repository/QuestionRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="165">
               <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding />
             </state>
@@ -133,18 +57,18 @@
       <file leaf-file-name="QuestionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModelBundle/Controller/QuestionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="465">
               <caret line="32" column="19" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -153,18 +77,18 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="math-template.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="math-template.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/math-template.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+              <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -173,7 +97,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
@@ -183,7 +107,7 @@
       <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="345">
               <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
               <folding />
             </state>
@@ -193,7 +117,7 @@
       <file leaf-file-name="LoadQuestionData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadQuestionData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="255">
               <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding>
                 <element signature="e#6#56#0#PHP" expanded="true" />
@@ -216,9 +140,9 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/index.html.twig" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Controller/QuestionController.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/math-template.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig" />
       </list>
     </option>
   </component>
@@ -230,10 +154,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="28" />
-    <option name="width" value="2562" />
-    <option name="height" value="1315" />
+    <option name="width" value="800" />
+    <option name="height" value="600" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -260,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -304,6 +225,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="references" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -323,6 +262,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ModelBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModelBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Question" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="math" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModelBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -386,6 +381,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,23 +445,24 @@
       <updated>1465872085861</updated>
       <workItem from="1465872088015" duration="4978000" />
       <workItem from="1466004333786" duration="1456000" />
+      <workItem from="1466008749974" duration="289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6434000" />
+    <option name="totallyTimeSpent" value="6723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="2562" height="1315" extended-state="6" />
+    <frame x="0" y="0" width="800" height="600" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19282869" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37335092" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18577075" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -486,6 +483,80 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Repository/QuestionRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/ModelBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Controller/QuestionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/math-template.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadQuestionData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="e#6#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Repository/QuestionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -548,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,13 +649,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadQuestionData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="255">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
             <element signature="e#6#56#0#PHP" expanded="true" />
@@ -595,7 +664,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="345">
           <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
           <folding />
         </state>
@@ -603,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
@@ -611,7 +680,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Controller/QuestionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="465">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="19" />
           <folding />
         </state>
@@ -627,16 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Repository/QuestionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="165">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -645,22 +706,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/math-template.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Resources/views/Question/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
