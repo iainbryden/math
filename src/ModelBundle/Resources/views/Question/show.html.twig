@@ -15,23 +15,25 @@
     </div>
     #}
 
-    <div class="challenge text">{{ entity.question }}</div>
+    <div class="challenge text text-center">{{ entity.question }}</div>
 
     <div class="math"></div>
 
-    <div class="pull-left">
+    <div class="center-text">
         <div class='row'>
-            <div class="phrase  col-lg-12 col-md-12  col-sm-12"></div>
-        </div
+            <div class="phrase col-lg-12 col-md-12 col-sm-12 text-center"></div>
+        </div>
     </div>
 
-    <div>
-        {% if prevEntity != null %}
-            <a href="{{ path('model_question_show', {id:prevEntity.id}) }}">{{ prevEntity.question }}</a>
-        {% endif %}
-        {% if nextEntity != null %}
-            <a href="{{ path('model_question_show', {id:nextEntity.id}) }}">{{ nextEntity.question }}</a>
-        {% endif %}
+    <div class="container">
+        <ul class="pager">
+            {% if prevEntity != null %}
+                <li class="previous"> <a href="{{ path('model_question_show', {id:prevEntity.id}) }}"><i class="fa fa-arrow-left" title="{{ prevEntity.question }}"></i></a></li>
+            {% endif %}
+            {% if nextEntity != null %}
+                <li class="next"><a href="{{ path('model_question_show', {id:nextEntity.id}) }}"><i class="fa fa-arrow-right" title="{{ nextEntity.question }}"></i></a></li>
+            {% endif %}
+        </ul>
     </div>
 
     <style>
@@ -51,7 +53,7 @@
         }
         .letter-block {
             border:1px #fff solid;
-            height:20px;
+            height:60px;
         }
         .letter {
             border-bottom:1px black solid;
@@ -63,6 +65,9 @@
         .math-block {
 
         }
+        .challenge {
+            margin-bottom: 30px;
+        }
         .secret {
             display:none;
         }
@@ -71,7 +76,6 @@
             border-bottom:1px black solid;
             width:40px;
         }
-
     </style>
 
 
