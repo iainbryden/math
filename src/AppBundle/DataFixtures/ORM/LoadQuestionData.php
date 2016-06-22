@@ -61,9 +61,6 @@ class LoadQuestionData implements FixtureInterface
 
     private function loadFromFile()
     {
-
-
-
         $em         = $this->entityManager;
         $filePath   = __DIR__."/Questions.ini";
         $text       = file_get_contents($filePath);

@@ -3,10 +3,10 @@
 {% block title %}ModelBundle:Question:index{% endblock %}
 
 {% block body %}
-    <ul>
+    <ol>
     {% for entity in entities %}
         <li><a href="{{ path('model_question_show', {id:entity.id}) }}">{{ entity.question }}</a></li>
     {% endfor %}
-    </ul>
+    </ol>
 {% endblock %}
 
