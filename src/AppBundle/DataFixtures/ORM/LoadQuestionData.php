@@ -67,38 +67,20 @@ class LoadQuestionData implements FixtureInterface
         $em         = $this->entityManager;
         $filePath   = __DIR__."/Questions.ini";
         $text       = file_get_contents($filePath);
-        $textArray  = explode("\n", $text);
 
         $q = "";
-        $a = "";
-//        $iteration = 0;
-//        for ($i = 0; $i < count($textArray); $i++) {
-//            $iteration++;
-//            if ($iteration == 1) {
-//                $q = $textArray[$i];
-//            }
-//            if ($iteration == 2) {
-//                $a = $textArray[$i];
-//                $entity = new Question();
-//                $entity->setQuestion($q);
-//                $entity->setAnswer($a);
-//                $em->persist($entity);
-//            }
-//            if ($iteration == 3) {
-//                $iteration = 0;
-//            }
-//        }
-
         $iteration = 0;
         $lines = file($filePath);
         foreach ($lines as $line_num => $line) {
             $iteration++;
             if ($iteration == 1) {
-                $q = $line;
+                $q = trim($line);
             }
             if ($iteration == 2) {
-                echo "\n$line_num : " . htmlspecialchars($line);
-                $a = htmlspecialchars(str_replace("\n", "", $line));
+                $a = htmlspecialchars(str_replace("\n", "", trim($line)));
+                echo "\n$line_num : ".htmlspecialchars($q);
+                echo "\n$line_num : ".htmlspecialchars($a);
+                echo "\n";
                 $entity = new Question();
                 $entity->setQuestion($q);
                 $entity->setAnswer($a);
