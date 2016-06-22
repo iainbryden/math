@@ -3,6 +3,7 @@
 {% block title %}ModelBundle:Question:show{% endblock %}
 
 {% block body %}
+    {#
     <div class="well">
         <div class="row">
             <div class="col-md-2"><i class="fa fa-anchor" aria-hidden="true"></i>&nbsp;font-awesome</div>
@@ -12,16 +13,25 @@
             <div class="col-md-2"><button class="button btn-primary">button</button>&nbsp;bootstrap-theme</div>
         </div>
     </div>
-    {{ entity.question }}
+    #}
 
-    <div class="challenge text">What does a nosey pepper do?</div>
+    <div class="challenge text">{{ entity.question }}</div>
 
     <div class="math"></div>
 
     <div class="pull-left">
         <div class='row'>
             <div class="phrase  col-lg-12 col-md-12  col-sm-12"></div>
-        </div>
+        </div
+    </div>
+
+    <div>
+        {% if prevEntity != null %}
+            <a href="{{ path('model_question_show', {id:prevEntity.id}) }}">{{ prevEntity.question }}</a>
+        {% endif %}
+        {% if nextEntity != null %}
+            <a href="{{ path('model_question_show', {id:nextEntity.id}) }}">{{ nextEntity.question }}</a>
+        {% endif %}
     </div>
 
     <style>
@@ -237,8 +247,8 @@
                 return array;
             }
 
-            //var phrase = "Please excuse my dear aunt Sally";
-            var phrase = "Gets jalapeno business";
+            //var phrase = "Please excuse my dear aunt Sally. Couldn't";
+            var phrase = "{{ entity.answer | raw }}";
             var phraseArray = makePhraseArray(phrase);
 
             showAllQuestions(phraseArray);
