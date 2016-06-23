@@ -5,9 +5,9 @@ namespace ModelBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 /**
- * @Route("/question")
+ * @Route("/mathpuzzle")
  */
-class QuestionController extends Controller
+class MathPuzzleController extends Controller
 {
     /**
      * @Route("/")
@@ -16,7 +16,7 @@ class QuestionController extends Controller
     {
         $repo       = $this->getDoctrine()->getRepository("ModelBundle:Question");
         $entities   = $repo->findAll();
-        return $this->render('ModelBundle:Question:index.html.twig', array(
+        return $this->render('ModelBundle:MathPuzzle:index.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -54,7 +54,7 @@ class QuestionController extends Controller
         $entity         = $entityArray[$self];
         $nextEntity     = ($next < count($entityArray)) ? $entityArray[$next] : null;
 
-        return $this->render('ModelBundle:Question:show.html.twig', array(
+        return $this->render('ModelBundle:MathPuzzle:show.html.twig', array(
             'prevEntity'    => $prevEntity,
             'entity'        => $entity,
             'nextEntity'    => $nextEntity,
@@ -66,7 +66,7 @@ class QuestionController extends Controller
      */
     public function addAction()
     {
-        return $this->render('ModelBundle:Question:add.html.twig', array(
+        return $this->render('ModelBundle:MathPuzzle:add.html.twig', array(
             // ...
         ));
     }

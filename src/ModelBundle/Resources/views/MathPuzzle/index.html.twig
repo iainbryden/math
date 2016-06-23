@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ModelBundle:MathPuzzle:index{% endblock %}
+
+{% block body %}
+    <ol>
+    {% for entity in entities %}
+        <li><a href="{{ path('model_mathpuzzle_show', {id:entity.id}) }}">{{ entity.question }}</a></li>
+    {% endfor %}
+    </ol>
+{% endblock %}
+
