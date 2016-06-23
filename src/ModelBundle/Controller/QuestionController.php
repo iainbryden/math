@@ -27,6 +27,12 @@ class QuestionController extends Controller
      */
     public function showAction($id)
     {
+
+        if ($this->container->has('profiler'))
+        {
+            $this->container->get('profiler')->disable();
+        }
+
         /** @var Question $entity **/
         $repo       = $this->getDoctrine()->getRepository("ModelBundle:Question");
         $entities   = $repo->findAll();

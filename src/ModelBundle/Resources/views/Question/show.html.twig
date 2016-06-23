@@ -3,82 +3,94 @@
 {% block title %}ModelBundle:Question:show{% endblock %}
 
 {% block body %}
-    {#
+<div class="header">
     <div class="well">
         <div class="row">
-            <div class="col-md-2"><i class="fa fa-anchor" aria-hidden="true"></i>&nbsp;font-awesome</div>
-            <div class="col-md-2">bootstrap</div>
-            <div class="col-md-2">jquery:  <span class="status">not working</span></div>
-            <div class="col-md-2">jquery ui</div>
-            <div class="col-md-2"><button class="button btn-primary">button</button>&nbsp;bootstrap-theme</div>
+            <div class="col-xs-1"><a href="{{ path("model_question_index") }}"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+            <div class="col-xs-8"><strong>Math Puzzles</strong></div>
+            <div class="col-xs-3"><button id="btn-print" class="button btn-primary pull-right"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;&nbsp;Print</button></div>
         </div>
     </div>
-    #}
-
+</div>
+<div class="printableContent">
     <div class="challenge text text-center">{{ entity.question }}</div>
-
-    <div class="math"></div>
-
+    <div class='row'>
+        <div class="math"></div>
+    </div>
     <div class="center-text">
         <div class='row'>
             <div class="phrase col-lg-12 col-md-12 col-sm-12 text-center"></div>
         </div>
     </div>
+</div>
+<div class="container">
+    <ul class="pager">
+        {% if prevEntity != null %}
+            <li class="previous"> <a href="{{ path('model_question_show', {id:prevEntity.id}) }}"><i class="fa fa-arrow-left" title="{{ prevEntity.question }}"></i></a></li>
+        {% endif %}
+        {% if nextEntity != null %}
+            <li class="next"><a href="{{ path('model_question_show', {id:nextEntity.id}) }}"><i class="fa fa-arrow-right" title="{{ nextEntity.question }}"></i></a></li>
+        {% endif %}
+    </ul>
+</div>
 
-    <div class="container">
-        <ul class="pager">
-            {% if prevEntity != null %}
-                <li class="previous"> <a href="{{ path('model_question_show', {id:prevEntity.id}) }}"><i class="fa fa-arrow-left" title="{{ prevEntity.question }}"></i></a></li>
-            {% endif %}
-            {% if nextEntity != null %}
-                <li class="next"><a href="{{ path('model_question_show', {id:nextEntity.id}) }}"><i class="fa fa-arrow-right" title="{{ nextEntity.question }}"></i></a></li>
-            {% endif %}
-        </ul>
-    </div>
+{% endblock %}
 
-    <style>
-        .text {
-            font-size:24px;
-        }
-        .phrase {
-            margin:10px;
-            margin-top:30px;
-        }
-        .block {
-            width:40px;
-            height:40px;
-            display:inline-block;
-            margin:3px;
-            text-align: center;
-        }
-        .letter-block {
-            border:1px #fff solid;
-            height:60px;
-        }
-        .letter {
-            border-bottom:1px black solid;
-        }
-        .space-block {
-            border:1px #fff solid;
-            border-top:1px white solid;
-        }
-        .math-block {
+{% block stylesheets %}
+<style>
+    .text {
+        font-size:24px;
+    }
+    .phrase {
+        margin:10px;
+        margin-top:30px;
+    }
+    .block {
+        width:40px;
+        height:40px;
+        display:inline-block;
+        margin:3px;
+        text-align: center;
+    }
+    .letter-block {
+        border:1px #fff solid;
+        height:60px;
+    }
+    .letter {
+        border-bottom:1px black solid;
+    }
+    .space-block {
+        border:1px #fff solid;
+        border-top:1px white solid;
+    }
+    .math-block {
 
-        }
-        .challenge {
-            margin-bottom: 30px;
-        }
-        .secret {
+    }
+    .challenge {
+        margin-bottom: 30px;
+    }
+    .secret {
+        display:none;
+    }
+    .underline {
+        display: inline-block;
+        border-bottom:1px black solid;
+        width:40px;
+    }
+    .wordBlock {
+        margin-right: 20px;
+        margin-left: 20px;
+        display:inline-block;
+    }
+    @media print {
+        .pager {
             display:none;
         }
-        .underline {
-            display: inline-block;
-            border-bottom:1px black solid;
-            width:40px;
+        .header {
+            display:none;
         }
-    </style>
-
-
+    }
+</style>
 {% endblock %}
 
 {% block javascripts %}
@@ -97,19 +109,41 @@
                 var mathblock = $("<div></div>").append(randomNum1 + " + " + randomNum2 + " = " + answer);
                 $(".math").append(mathblock);
             }
-
+//            function showPhraseAnswers(phrase) {
+//                for (var i = 0; i < phrase.length; i++) {
+//                    var char                = phrase.charAt(i);
+//                    var letterblock         = $("<div class='block letter-block text'><div class='letter'></div><div class='number'></div></div>");
+//                    var spaceblock          = $("<div class='block space-block'></div>");
+//                    var num                 = getNumberByChar(char, phraseArray);
+//                    var secretAnswerBlock   = $("<div class='secret'></div>").text(char);
+//
+//                    letterblock.find(".number").append(num);
+//                    letterblock.find(".letter").append(secretAnswerBlock);
+//
+//                    $(".phrase").append((char == " ") ? spaceblock.text(char) : letterblock);
+//                }
+//            }
             function showPhraseAnswers(phrase) {
-                for (var i = 0; i < phrase.length; i++) {
-                    var char                = phrase.charAt(i);
-                    var letterblock         = $("<div class='block letter-block text'><div class='letter'></div><div class='number'></div></div>");
-                    var spaceblock          = $("<div class='block space-block'></div>");
-                    var num                 = getNumberByChar(char, phraseArray);
-                    var secretAnswerBlock   = $("<div class='secret'></div>").text(char);
+                var words = phrase.split(" ");
+                //alert(words.length);
 
-                    letterblock.find(".number").append(num);
-                    letterblock.find(".letter").append(secretAnswerBlock);
+                for (var j = 0; j < words.length; j++) {
+                    var word = words[j];
+                    var wordBlock = $("<span class='wordBlock'>");
+                    for (var i = 0; i < word.length; i++) {
+                        var char = word.charAt(i);
+                        var letterblock = $("<div class='block letter-block text'><div class='letter'></div><div class='number'></div></div>");
+                        var spaceblock = $("<div class='block space-block'></div>");
+                        var num = getNumberByChar(char, phraseArray);
+                        var secretAnswerBlock = $("<div class='secret'></div>").text(char);
 
-                    $(".phrase").append((char == " ") ? spaceblock.text(char) : letterblock);
+                        letterblock.find(".number").append(num);
+                        letterblock.find(".letter").append(secretAnswerBlock);
+
+                        wordBlock.append(letterblock);
+                    }
+                    //$(".phrase").append((char == " ") ? spaceblock.text(char) : letterblock);
+                    $(".phrase").append(wordBlock);
                 }
             }
 
@@ -226,7 +260,7 @@
                 var secretAnswerBlock   = $("<span class='secret'></span>").text(obj.answer);
                 space.append(secretAnswerBlock)
 
-                q = $("<div class='col-lg-3 col-md-4 col-sm-6 text'></div>");
+                q = $("<div class='col-xs-4 text'></div>");
                 q.append(obj.char.toUpperCase() + ": ");
                 q.append(obj.question);
                 q.append(" = ");
@@ -252,15 +286,30 @@
             }
 
             //var phrase = "Please excuse my dear aunt Sally. Couldn't";
-            var phrase = "{{ entity.answer | raw }}";
-            var phraseArray = makePhraseArray(phrase);
+            var phraseText = "{{ entity.answer | raw }}";
+            var phraseArray = makePhraseArray(phraseText);
 
             showAllQuestions(phraseArray);
-            showPhraseAnswers(phrase, phraseArray);
+            showPhraseAnswers(phraseText);
 
             $(".math").click(function(){
-                $(".secret").show();
-            })
+                if ($(".secret").is(":visible")) {
+                    $(".secret").hide();
+                } else {
+                    $(".secret").show();
+                }
+            });
+
+            $("#btn-print").click(function(){
+                window.print();
+            });
+
+            window.onbeforeprint = function() {
+
+            };
+            window.onafterprint = function() {
+                console.log('This will be called after the user prints');
+            };
         })
     </script>
 {% endblock %}
