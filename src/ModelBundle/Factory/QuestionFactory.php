@@ -8,14 +8,19 @@ namespace ModelBundle\Factory;
  */
 class QuestionFactory
 {
+    private $level;
+    public function __construct($level)
+    {
+        $this->level = $level;
+    }
     /**
      * @param int $level
      */
-    public function getQuestions($level = QuestionLevels::LEVEL_1)
+    public function getQuestions()
     {
         $questions = [];
-        for ($i = 0; $i < 10; $i++) {
-            $questions[] = $this->getQuestion($level);
+        for ($i = 0; $i < 30; $i++) {
+            $questions[] = $this->getQuestion();
         }
 
         return $questions;
@@ -24,17 +29,21 @@ class QuestionFactory
     /**
      * @param int $level
      */
-    public function getQuestion($level)
+    public function getQuestion()
     {
-        switch($level) {
+        switch($this->level) {
             case(QuestionLevels::LEVEL_1):
                 return $this->getQuestionLevelOne();
             break;
             case(QuestionLevels::LEVEL_2);
                 return $this->getQuestionLevelTwo();
             break;
+            case(QuestionLevels::LEVEL_3);
+                return $this->getQuestionLevelThree();
+            break;
+            default:
+                return $this->getQuestionLevelOne();
         }
-        return null;
     }
 
     private function getQuestionLevelOne()
@@ -43,7 +52,7 @@ class QuestionFactory
         $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 10);
         $question['operator']       = $this->getRandomOperator([Operators::ADD, Operators::SUBTRACT]);
 
-        $this->calculateResult($question, QuestionLevels::LEVEL_1);
+        $this->calculateResult($question);
 
         return $question;
     }
@@ -52,10 +61,51 @@ class QuestionFactory
     private function getQuestionLevelTwo()
     {
         $question                   = [];
-        $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 10);
-        $question['operator']       = $this->getRandomOperator([Operators::MULTIPLY]);
+        $operator                   = $this->getRandomOperator([Operators::ADD, Operators::SUBTRACT, Operators::MULTIPLY, Operators::DIVIDE]);
+        $question['operator']       = $operator;
 
-        $this->calculateResult($question, QuestionLevels::LEVEL_2);
+        switch (end($operator)) {
+        case (Operators::ADD):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 100);
+            break;
+        case (Operators::SUBTRACT):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 100, NumberOrder::HIGHER_FIRST);
+            break;
+        case (Operators::MULTIPLY):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, [100, 2]);
+            break;
+        case (Operators::DIVIDE):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 10);
+            break;
+        }
+
+        $this->calculateResult($question);
+
+        return $question;
+    }
+
+    private function getQuestionLevelThree()
+    {
+        $question                   = [];
+        $operator                   = $this->getRandomOperator([Operators::DIVIDE]);
+        $question['operator']       = $operator;
+
+        switch (end($operator)) {
+        case (Operators::ADD):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 100);
+            break;
+        case (Operators::SUBTRACT):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 100, NumberOrder::HIGHER_FIRST);
+            break;
+        case (Operators::MULTIPLY):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, [100, 2]);
+            break;
+        case (Operators::DIVIDE):
+            $question['sourceNumbers']  = $this->getRandomSourceNumbers(2, 10);
+            break;
+        }
+
+        $this->calculateResult($question);
 
         return $question;
     }
@@ -68,32 +118,42 @@ class QuestionFactory
         return array_slice($operators, $rand, 1, true);
     }
 
-    private function getRandomSourceNumbers($count, $highestValue)
+    private function getRandomSourceNumbers($count, $highestValue, $numberOrder = NumberOrder::ANY)
     {
         $numbers = [];
         for ($i = 0; $i < $count; $i++) {
-            $numbers[] = rand(0, $highestValue);
+            if (is_array($highestValue) && count($highestValue) >= $i ) {
+                $numbers[] = rand(0, $highestValue[$i]);
+            } else {
+                $numbers[] = rand(0, $highestValue);
+            }
         }
+        switch($numberOrder) {
+            case (NumberOrder::HIGHER_FIRST):
+                arsort($numbers);
+                break;
+            case (NumberOrder::LOWER_FIRST):
+                asort($numbers);
+                break;
+        }
+
         return $numbers;
     }
 
-    private function calculateResult(&$question, $level)
+    private function calculateResult(&$question)
     {
-        //$question['whatIsThis'] = end($question['operator']);
-
         switch (end($question['operator'])) {
             case (Operators::ADD):
                 $val = 0;
-                foreach($question['sourceNumbers'] as $number) {
-                    $val += intval($number);
+                foreach ($question['sourceNumbers'] as $number) {
+                    $val += $number;
                 }
                 $question['result'] = $val;
                 break;
             case (Operators::SUBTRACT):
-                // TODO: sort from hi to low value before calculating if avoiding negative numbers (based on $level).
                 $iteration = 0;
                 $val = 0;
-                foreach($question['sourceNumbers'] as $number) {
+                foreach ($question['sourceNumbers'] as $number) {
                     $val = ($iteration++ == 0) ? $number : $val - $number;
                 }
                 $question['result'] = $val;
@@ -101,10 +161,31 @@ class QuestionFactory
             case (Operators::MULTIPLY):
                 $iteration = 0;
                 $val = 0;
-                foreach($question['sourceNumbers'] as $number) {
+                foreach ($question['sourceNumbers'] as $number) {
                     $val = ($iteration++ == 0) ? $number : $val * $number;
                 }
                 $question['result'] = $val;
+                break;
+            case (Operators::DIVIDE):
+                // 3 x 2 = 6     -- sort higher first
+                // 6 % 3 = 2     -- swap result and first number
+                // 5 % 0 = ?     -- avoid divide by zero
+                $iteration  = 0;
+                $val        = 0;
+//                if (in_array('0', $numbers)) { // if there's a zero here, make it first and just set the answer to 0
+//                    asort($numbers); // low to high
+//                    $question['result'] = 0;
+//                    $question['sourceNumbers']  = $numbers;
+//                } else {
+                    arsort($question['sourceNumbers']); // high to low
+                    foreach ($question['sourceNumbers'] as $number) {
+                        $val = ($iteration++ == 0) ? $number : $val * $number;
+                    }
+                    // swap first number with the answer
+                    $firstNumber                    = &$question['sourceNumbers'][0];
+                    $question['sourceNumbers'][0]   = $val;
+                    $question['result']             = $firstNumber;
+//                }
                 break;
         }
 

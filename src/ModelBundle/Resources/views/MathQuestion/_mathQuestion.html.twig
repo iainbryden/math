@@ -1,0 +1,63 @@
+{#{% if question.operator | first == "+" %}#}
+    {#{{ include('ModelBundle:MathQuestion:_mathQuestion.Addition.html.twig' , {'question': question }) }}#}
+{#{% elseif question.operator | first == "-"  %}#}
+    {#{{ include('ModelBundle:MathQuestion:_mathQuestion.Subtraction.html.twig' , {'question': question }) }}#}
+{#{% elseif question.operator | first == "x"  %}#}
+    {#{{ include('ModelBundle:MathQuestion:_mathQuestion.Multiplication.html.twig' , {'question': question }) }}#}
+{#{% elseif question.operator | first == "%"  %}#}
+    {#{{ include('ModelBundle:MathQuestion:_mathQuestion.Division.html.twig' , {'question': question }) }}#}
+{#{% endif %}#}
+
+
+<table class="mathQuestion">
+    <tr>
+        <td class="operator" valign="bottom">
+            {{ question.operator | first }}
+        </td>
+        <td class="numbers" valign="bottom">
+            <table>
+                {% for number in question.sourceNumbers %}
+                    <tr><td class="pull-right">{{ number }}</td></tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+    <tr><td colspan="2" class="line"></td></tr>
+    <tr><td></td><td class="result pull-right">{{ question.result }}</td></tr>
+</table>
+
+
+{% block stylesheets %}
+    <style>
+        td, tr, table {
+            /*border:1px red solid;*/
+        }
+        .mathQuestion {
+            margin:10px;
+            display:inline-block;
+            /*border:1px red solid;*/
+            padding:10px;
+        }
+        .mathQuestion .operator {
+            vertical-align: bottom;
+        }
+        .mathQuestion .numbers, .mathQuestion .result {
+            float:right;
+        }
+        .mathQuestion .result {
+            display:none;
+        }
+        .mathQuestion .line {
+            border-bottom:1px solid black;
+        }
+    </style>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function(){
+            $(".printableContent").click(function(){
+                    $(".mathQuestion .result").show();
+            });
+        })
+    </script>
+{% endblock %}

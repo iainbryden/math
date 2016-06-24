@@ -31,8 +31,23 @@ class MathQuestionController extends Controller
      */
     public function showLevelAction($level)
     {
-        $questionFactory    = new QuestionFactory();
-        $questions          = $questionFactory->getQuestions($level);
+        $questionFactory    = new QuestionFactory($level);
+        $questions          = $questionFactory->getQuestions();
+
+        return $this->render('ModelBundle:MathQuestion:show.html.twig', array (
+            'questions' => $questions,
+        ));
+    }
+
+    /**
+     * @Route("/{level}/json")
+     * @param string $level
+     * @return Response
+     */
+    public function showLevelJsonAction($level)
+    {
+        $questionFactory    = new QuestionFactory($level);
+        $questions          = $questionFactory->getQuestions();
 
         //return new Response($questions);
         $serializer = $this->container->get('serializer');
@@ -42,10 +57,9 @@ class MathQuestionController extends Controller
 
         return $response;
 
-        return $this->render('ModelBundle:MathQuestion:show.html.twig', array(
-            'questions'    => $questions,
-        ));
-
+//        return $this->render('ModelBundle:MathQuestion:show.html.twig', array (
+//            'questions' => $questions,
+//        ));
     }
 
     /**

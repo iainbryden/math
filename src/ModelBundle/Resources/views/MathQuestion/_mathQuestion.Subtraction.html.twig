@@ -1,0 +1,16 @@
+<table class="mathQuestion">
+    <tr>
+        <td class="operator" valign="bottom">
+            {{ question.operator | first }}
+        </td>
+        <td class="numbers" valign="bottom">
+            <table>
+                {% for number in question.sourceNumbers %}
+                    <tr><td class="pull-right">{{ number }}</td></tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+    <tr><td colspan="2" class="line"></td></tr>
+    <tr><td></td><td class="result pull-right">{{ question.result }}</td></tr>
+</table>

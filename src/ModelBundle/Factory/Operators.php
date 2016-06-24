@@ -19,11 +19,6 @@ class Operators
     public static function getAllOperators($allowed = null)
     {
         $reflector = new ReflectionClass(__CLASS__);
-        
-        //if ($allowed == null) {
-        //    return $reflector->getConstants();
-        //}
-
 
         return ($allowed) ? array_intersect($reflector->getConstants(), $allowed) : $reflector->getConstants();
     }
