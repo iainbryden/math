@@ -1,0 +1,287 @@
+{% extends "::math-template.html.twig" %}
+
+{% block title %}ModelBundle:Question:show{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="well">
+            <div class="row">
+                <div class="col-xs-1"><a href="{{ path("model_mathpuzzle_index") }}"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+                <div class="col-xs-8"><strong>Math Puzzles</strong></div>
+                <div class="col-xs-3"><button id="btn-print" class="button btn-primary pull-right"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;&nbsp;Print</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="printableContent">
+        <div class="challenge text text-center">{{ entity.question }}</div>
+        <div class='row'>
+            <div class="math"></div>
+        </div>
+        <div class="center-text">
+            <div class='row'>
+                <div class="phrase col-lg-12 col-md-12 col-sm-12 text-center"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="pager">
+            {% if prevEntity != null %}
+                <li class="previous"> <a href="{{ path('model_mathpuzzle_show', {id:prevEntity.id}) }}"><i class="fa fa-arrow-left" title="{{ prevEntity.question }}"></i></a></li>
+            {% endif %}
+            {% if nextEntity != null %}
+                <li class="next"><a href="{{ path('model_mathpuzzle_show', {id:nextEntity.id}) }}"><i class="fa fa-arrow-right" title="{{ nextEntity.question }}"></i></a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .text {
+            font-size:24px;
+        }
+        .phrase {
+            margin:10px;
+            margin-top:30px;
+        }
+        .block {
+            width:40px;
+            height:40px;
+            display:inline-block;
+            margin:3px;
+            text-align: center;
+        }
+        .letter-block {
+            border:1px #fff solid;
+            height:60px;
+        }
+        .letter {
+            border-bottom:1px black solid;
+        }
+        .space-block {
+            border:1px #fff solid;
+            border-top:1px white solid;
+        }
+        .math-block {
+        }
+        .challenge {
+            margin-bottom: 30px;
+        }
+        .secret {
+            display:none;
+        }
+        .underline {
+            display: inline-block;
+            border-bottom:1px black solid;
+            width:40px;
+        }
+        .wordBlock {
+            margin-right: 20px;
+            margin-left: 20px;
+            display:inline-block;
+        }
+        @media print {
+            .pager {
+                display:none;
+            }
+            .header {
+                display:none;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function(){
+            $(".status").text("working")
+        })
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            function showMath() {
+                var randomNum1 = Math.floor((Math.random() * 100) + 1);
+                var randomNum2 = Math.floor((Math.random() * 100) + 1);
+                var answer = randomNum1 + randomNum2;
+                var mathblock = $("<div></div>").append(randomNum1 + " + " + randomNum2 + " = " + answer);
+                $(".math").append(mathblock);
+            }
+//            function showPhraseAnswers(phrase) {
+//                for (var i = 0; i < phrase.length; i++) {
+//                    var char                = phrase.charAt(i);
+//                    var letterblock         = $("<div class='block letter-block text'><div class='letter'></div><div class='number'></div></div>");
+//                    var spaceblock          = $("<div class='block space-block'></div>");
+//                    var num                 = getNumberByChar(char, phraseArray);
+//                    var secretAnswerBlock   = $("<div class='secret'></div>").text(char);
+//
+//                    letterblock.find(".number").append(num);
+//                    letterblock.find(".letter").append(secretAnswerBlock);
+//
+//                    $(".phrase").append((char == " ") ? spaceblock.text(char) : letterblock);
+//                }
+//            }
+            function showPhraseAnswers(phrase) {
+                var words = phrase.split(" ");
+                //alert(words.length);
+                for (var j = 0; j < words.length; j++) {
+                    var word = words[j];
+                    var wordBlock = $("<span class='wordBlock'>");
+                    for (var i = 0; i < word.length; i++) {
+                        var char = word.charAt(i);
+                        var letterblock = $("<div class='block letter-block text'><div class='letter'></div><div class='number'></div></div>");
+                        var spaceblock = $("<div class='block space-block'></div>");
+                        var num = getNumberByChar(char, phraseArray);
+                        var secretAnswerBlock = $("<div class='secret'></div>").text(char);
+                        letterblock.find(".number").append(num);
+                        letterblock.find(".letter").append(secretAnswerBlock);
+                        wordBlock.append(letterblock);
+                    }
+                    //$(".phrase").append((char == " ") ? spaceblock.text(char) : letterblock);
+                    $(".phrase").append(wordBlock);
+                }
+            }
+            function makePhraseArray(phrase) {
+                arr = [];
+                for (var i = 0; i < phrase.length; i++) {
+                    var char    = phrase.charAt(i);
+                    if (char!= " ") {
+                        var qAndA = getQuestionAndAnswer(char);
+                        while (answerExists(qAndA[1], arr)) {
+                            qAndA = getQuestionAndAnswer(char);
+                        }
+                        if (!charIsInArray(char, arr)) {
+                            arr.push(
+                                    {
+                                        'displayChar'   :char,
+                                        'char'          :char.toLowerCase(),
+                                        'question'      :qAndA[0],
+                                        'answer'        :qAndA[1]
+                                    }
+                            )
+                        }
+                    }
+                }
+                return arr;
+            }
+            function charIsInArray(char, arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].char == char.toLocaleLowerCase()) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            function getNumberByChar(char, arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].char == char.toLocaleLowerCase()) {
+                        return arr[i].answer;
+                    }
+                }
+                return "";
+            }
+            function answerExists(a, arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].answer == a) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            function getQuestionAndAnswer(char) {
+                var arr = [];
+                var operator    = ['+', '-', 'x', '%'][Math.floor((Math.random() * 4))];
+                switch(operator) {
+                    case '+':
+                        var randomNum1  = Math.floor((Math.random() * 100) + 1);
+                        var randomNum2  = Math.floor((Math.random() * 100) + 1);
+                        var answer      = randomNum1 + randomNum2;
+                        break;
+                    case '-':
+                        // largest number first (always positive answer)
+                        var randomNum1  = Math.floor((Math.random() * 100) + 1);
+                        var randomNum2  = Math.floor((Math.random() * 100) + 1);
+                        if (randomNum1 < randomNum2) {
+                            var temp = randomNum2;
+                            randomNum2 = randomNum1;
+                            randomNum1 = temp;
+                        }
+                        var answer      = randomNum1 - randomNum2;
+                        break;
+                    case 'x':
+                        var randomNum1  = Math.floor((Math.random() * 10) + 1);
+                        var randomNum2  = Math.floor((Math.random() * 10) + 1);
+                        var answer      = randomNum1 * randomNum2;
+                        break;
+                    case '%':
+                        // largest number first
+                        var randomNum1  = Math.floor((Math.random() * 10) + 1);
+                        var answer      = Math.floor((Math.random() * 10) + 1);
+                        var randomNum2  = randomNum1 * answer;
+                        if (randomNum1 < randomNum2) {
+                            var temp = randomNum2;
+                            randomNum2 = randomNum1;
+                            randomNum1 = temp;
+                        }
+                        break;
+                }
+                arr[0]          = $("<span>" + randomNum1 + " "+operator+" " + randomNum2 + "</span>");
+                arr[1]          = answer;
+                arr[2]          = operator;
+                return arr;
+            }
+            function showAllQuestions(phraseArray) {
+                shuffle(phraseArray);
+                for (var i = 0; i < phraseArray.length; i++) {
+                    obj = phraseArray[i];
+                    showOneQuestion(obj);
+                    $(".math").append(q);
+                }
+            }
+            function showOneQuestion(obj) {
+                var space               = $("<span class='underline'></span>");
+                var secretAnswerBlock   = $("<span class='secret'></span>").text(obj.answer);
+                space.append(secretAnswerBlock)
+                q = $("<div class='col-xs-4 text'></div>");
+                q.append(obj.char.toUpperCase() + ": ");
+                q.append(obj.question);
+                q.append(" = ");
+                q.append(space);
+                q.append("<br/>");
+                $(".math").append(q)
+            }
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex;
+                while (0 !== currentIndex) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+                return array;
+            }
+            //var phrase = "Please excuse my dear aunt Sally. Couldn't";
+            var phraseText = "{{ entity.answer | raw }}";
+            var phraseArray = makePhraseArray(phraseText);
+            showAllQuestions(phraseArray);
+            showPhraseAnswers(phraseText);
+            $(".math").click(function(){
+                if ($(".secret").is(":visible")) {
+                    $(".secret").hide();
+                } else {
+                    $(".secret").show();
+                }
+            });
+            $("#btn-print").click(function(){
+                window.print();
+            });
+            window.onbeforeprint = function() {
+            };
+            window.onafterprint = function() {
+                console.log('This will be called after the user prints');
+            };
+        })
+    </script>
+{% endblock %}
